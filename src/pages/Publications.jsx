@@ -1,5 +1,6 @@
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
+import { List, ListItem, ListItemText, Link } from '@mui/material';
 import {
     phdThesis,
     theses,
@@ -17,9 +18,10 @@ const Publications = () => {
         padding: '16px',
         marginBottom: '16px',
     };
+
     const imageStyle = {
         maxWidth: '100%',
-        height: '10rem',
+        height: '15rem',
     };
 
     const centerAlignStyle = {
@@ -37,155 +39,218 @@ const Publications = () => {
     };
 
     return (
-        <div>
-            <Paper style={paperStyle}>
-                <Grid container spacing={1}>
-                    <Grid item xs={12} md={4} style={centerAlignStyle}>
-                        <img src={pub1} alt="Robot" style={imageStyle} />
-                    </Grid>
-                    <Grid item xs={12} md={4} style={centerAlignStyle}>
-                        <img src={pub2} alt="Robot" style={imageStyle} />
-                    </Grid>
-                    <Grid item xs={12} md={2} style={centerAlignStyle}>
-                        <img src={pub3} alt="Robot" style={imageStyle} />
-                    </Grid>
-                    <Grid item xs={12} md={2} style={centerAlignStyle}>
-                        <img src={pub4} alt="Robot" style={imageStyle} />
-                    </Grid>
+        <Paper elevation={3} sx={{ ...paperStyle }}>
+            <Grid container spacing={1}>
+                <Grid item xs={12} md={4} style={centerAlignStyle}>
+                    <img src={pub1} alt="Robot" style={imageStyle} />
+                    <Typography variant='body1'>Recent pictures 2020-2021</Typography>
                 </Grid>
-                <hr style={hrStyle} />
-                <Typography variant="h4" fontWeight="bolder">
-                    Publications
-                </Typography>
-                <hr style={hrStyle} />
-                <Typography variant="h6">Ph.D. Thesis</Typography>
-                <Typography variant="body1">
-                    <ul>
-                        {phdThesis.map((thesis, index) => (
-                            <li key={index}>
-                                {thesis.name}: {thesis.title} ({thesis.status})
-                            </li>
-                        ))}
-                    </ul>
-                </Typography>
-                <hr style={hrStyle} />
+                <Grid item xs={12} md={4} style={centerAlignStyle}>
+                    <img src={pub2} alt="Robot" style={imageStyle} />
+                </Grid>
+                <Grid item xs={12} md={2} style={centerAlignStyle}>
+                    <img src={pub3} alt="Robot" style={imageStyle} />
+                </Grid>
+                <Grid item xs={12} md={2} style={centerAlignStyle}>
+                    <img src={pub4} alt="Robot" style={imageStyle} />
+                </Grid>
+            </Grid>
+            <hr style={hrStyle} />
+            <Typography variant="h4" fontWeight="bolder">
+                Publications
+            </Typography>
+            <hr style={hrStyle} />
 
-                <Typography variant="h6">Theses</Typography>
-                <Typography variant="body1">
-                    <ul>
-                        {theses.map((thesis, index) => (
-                            <li key={index}>
-                                {thesis.author}: {thesis.title} ({thesis.degree}, {thesis.university}, {thesis.year})
-                                {thesis.doi && (
-                                    <a href={`https://doi.org/${thesis.doi}`} target="_blank" rel="noopener noreferrer">
-                                        DOI: {thesis.doi}
-                                    </a>
-                                )}
-                                {thesis.pdfLink && (
-                                    <a href={thesis.pdfLink} target="_blank" rel="noopener noreferrer">
-                                        PDF Link
-                                    </a>
-                                )}
-                            </li>
-                        ))}
-                    </ul>
-                </Typography>
-                <hr style={hrStyle} />
+            <Typography variant="h6">Ph.D. Thesis</Typography>
+            <List>
+                {phdThesis.map((thesis, index) => (
+                    <ListItem key={index} disablePadding>
+                        <ListItemText
+                            primary={thesis.title}
+                            secondaryTypographyProps={{ component: 'div' }}
+                            secondary={
+                                <>
+                                    <Typography variant="body1" component="span" fontWeight="bold">
+                                        {thesis.name}:
+                                    </Typography>{" "}
+                                    {thesis.title} ({thesis.status})
+                                </>
+                            }
+                        />
+                    </ListItem>
+                ))}
+            </List>
+            <hr style={hrStyle} />
 
-                <Typography variant="h6">Books and Chapters</Typography>
-                <Typography variant="body1">
-                    <ul>
-                        {booksAndChapters.map((book, index) => (
-                            <li key={index}>
-                                {book.title} by {book.authors} ({book.year})
-                                {book.doi && (
-                                    <a href={`https://doi.org/${book.doi}`} target="_blank" rel="noopener noreferrer">
-                                        DOI: {book.doi}
-                                    </a>
-                                )}
-                            </li>
-                        ))}
-                    </ul>
-                </Typography>
-                <hr style={hrStyle} />
+            <Typography variant="h6">Theses</Typography>
+            <List>
+                {theses.map((thesis, index) => (
+                    <ListItem key={index} disablePadding>
+                        <ListItemText
+                            primary={thesis.title}
+                            secondaryTypographyProps={{ component: 'div' }}
+                            secondary={
+                                <>
+                                    <Typography variant="body1" component="span" fontWeight="bold">
+                                        {thesis.author}:
+                                    </Typography>{" "}
+                                    {thesis.title} ({thesis.degree}, {thesis.university}, {thesis.year})
+                                    {thesis.doi && (
+                                        <Link href={`https://doi.org/${thesis.doi}`} target="_blank" rel="noopener noreferrer">
+                                            DOI: {thesis.doi}
+                                        </Link>
+                                    )}
+                                    {thesis.pdfLink && (
+                                        <Link href={thesis.pdfLink} target="_blank" rel="noopener noreferrer">
+                                            PDF Link
+                                        </Link>
+                                    )}
+                                </>
+                            }
+                        />
+                    </ListItem>
+                ))}
+            </List>
+            <hr style={hrStyle} />
 
-                <Typography variant="h6">Journal Papers</Typography>
-                <Typography variant="body1">
-                    <ul>
-                        {journalPapers.map((paper, index) => (
-                            <li key={index}>
-                                {paper.authors.join(', ')}: {paper.title}. {paper.journal}, {paper.date}.
-                                {paper.doi && (
-                                    <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer">
-                                        DOI: {paper.doi}
-                                    </a>
-                                )}
-                            </li>
-                        ))}
-                    </ul>
-                </Typography>
-                <hr style={hrStyle} />
+            <Typography variant="h6">Books and Chapters</Typography>
+            <List>
+                {booksAndChapters.map((book, index) => (
+                    <ListItem key={index} disablePadding>
+                        <ListItemText
+                            primary={book.title}
+                            secondaryTypographyProps={{ component: 'div' }}
+                            secondary={
+                                <>
+                                    <Typography variant="body1" component="span" fontWeight="bold">
+                                        {book.authors}:
+                                    </Typography>{" "}
+                                    {book.title} ({book.year})
+                                    {book.doi && (
+                                        <Link href={`https://doi.org/${book.doi}`} target="_blank" rel="noopener noreferrer">
+                                            DOI: {book.doi}
+                                        </Link>
+                                    )}
+                                </>
+                            }
+                        />
+                    </ListItem>
+                ))}
+            </List>
+            <hr style={hrStyle} />
 
-                <Typography variant="h6">Conference Papers</Typography>
-                <Typography variant="body1">
-                    <ul>
-                        {conferencePapers.map((paper, index) => (
-                            <li key={index}>
-                                {paper.authors.join(', ')}: {paper.title}. {paper.conference}, {paper.location}, {paper.date}.
-                                {paper.doi && (
-                                    <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer">
-                                        DOI: {paper.doi}
-                                    </a>
-                                )}
-                                {paper.pages && (
-                                    <span> Pages: {paper.pages}</span>
-                                )}
-                                {paper.pdfLink && (
-                                    <a href={paper.pdfLink} target="_blank" rel="noopener noreferrer">
-                                        PDF Link
-                                    </a>
-                                )}
-                            </li>
-                        ))}
-                    </ul>
-                </Typography>
-                <hr style={hrStyle} />
+            <Typography variant="h6">Journal Papers</Typography>
+            <List>
+                {journalPapers.map((paper, index) => (
+                    <ListItem key={index} disablePadding>
+                        <ListItemText
+                            primary={paper.title}
+                            secondaryTypographyProps={{ component: 'div' }}
+                            secondary={
+                                <>
+                                    <Typography variant="body1" component="span" fontWeight="bold">
+                                        {paper.authors.join(', ')}:
+                                    </Typography>{" "}
+                                    {paper.title}. {paper.journal}, {paper.date}.
+                                    {paper.doi && (
+                                        <Link href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer">
+                                            DOI: {paper.doi}
+                                        </Link>
+                                    )}
+                                </>
+                            }
+                        />
+                    </ListItem>
+                ))}
+            </List>
+            <hr style={hrStyle} />
 
-                <Typography variant="h6">Invited Talks</Typography>
-                <Typography variant="body1">
-                    <ul>
-                        {invitedTalks.map((talk, index) => (
-                            <li key={index}>
-                                {talk.title} ({talk.type}) - {talk.event}, {talk.date}.
-                                {talk.link && (
-                                    <a href={talk.link} target="_blank" rel="noopener noreferrer">
-                                        Link
-                                    </a>
-                                )}
-                            </li>
-                        ))}
-                    </ul>
-                </Typography>
-                <hr style={hrStyle} />
+            <Typography variant="h6">Conference Papers</Typography>
+            <List>
+                {conferencePapers.map((paper, index) => (
+                    <ListItem key={index} disablePadding>
+                        <ListItemText
+                            primary={paper.title}
+                            secondaryTypographyProps={{ component: 'div' }}
+                            secondary={
+                                <>
+                                    <Typography variant="body1" component="span" fontWeight="bold">
+                                        {paper.authors.join(', ')}:
+                                    </Typography>{" "}
+                                    {paper.title}. {paper.conference}, {paper.location}, {paper.date}.
+                                    {paper.doi && (
+                                        <Link href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer">
+                                            DOI: {paper.doi}
+                                        </Link>
+                                    )}
+                                    {paper.pages && (
+                                        <span> Pages: {paper.pages}</span>
+                                    )}
+                                    {paper.pdfLink && (
+                                        <Link href={paper.pdfLink} target="_blank" rel="noopener noreferrer">
+                                            PDF Link
+                                        </Link>
+                                    )}
+                                </>
+                            }
+                        />
+                    </ListItem>
+                ))}
+            </List>
+            <hr style={hrStyle} />
 
-                <Typography variant="h6">Miscellaneous Technical Reports</Typography>
-                <Typography variant="body1">
-                    <ul>
-                        {miscTechnicalReports.map((report, index) => (
-                            <li key={index}>
-                                {report.authors.join(', ')}: {report.title}. {report.event}, {report.date}.
-                                {report.note}
-                                {report.pdfLink && (
-                                    <a href={report.pdfLink} target="_blank" rel="noopener noreferrer">
-                                        PDF Link
-                                    </a>
-                                )}
-                            </li>
-                        ))}
-                    </ul>
-                </Typography>
-            </Paper>
-        </div>
+            <Typography variant="h6">Invited Talks</Typography>
+            <List>
+                {invitedTalks.map((talk, index) => (
+                    <ListItem key={index} disablePadding>
+                        <ListItemText
+                            primary={talk.title}
+                            secondaryTypographyProps={{ component: 'div' }}
+                            secondary={
+                                <>
+                                    <Typography variant="body1" component="span" fontWeight="bold">
+                                        {talk.type}:
+                                    </Typography>{" "}
+                                    {talk.title} - {talk.event}, {talk.date}.
+                                    {talk.link && (
+                                        <Link href={talk.link} target="_blank" rel="noopener noreferrer">
+                                            Link
+                                        </Link>
+                                    )}
+                                </>
+                            }
+                        />
+                    </ListItem>
+                ))}
+            </List>
+            <hr style={hrStyle} />
+
+            <Typography variant="h6">Miscellaneous Technical Reports</Typography>
+            <List>
+                {miscTechnicalReports.map((report, index) => (
+                    <ListItem key={index} disablePadding>
+                        <ListItemText
+                            primary={report.title}
+                            secondaryTypographyProps={{ component: 'div' }}
+                            secondary={
+                                <>
+                                    <Typography variant="body1" component="span" fontWeight="bold">
+                                        {report.authors.join(', ')}:
+                                    </Typography>{" "}
+                                    {report.title}. {report.event}, {report.date}.
+                                    {report.note}
+                                    {report.pdfLink && (
+                                        <Link href={report.pdfLink} target="_blank" rel="noopener noreferrer">
+                                            PDF Link
+                                        </Link>
+                                    )}
+                                </>
+                            }
+                        />
+                    </ListItem>
+                ))}
+            </List>
+        </Paper>
     );
 };
 

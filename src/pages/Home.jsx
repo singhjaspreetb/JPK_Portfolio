@@ -39,7 +39,7 @@ const Home = () => {
 
   return (
     <div>
-      <Paper style={paperStyle}>
+      <Paper elevation={3} sx={{ ...paperStyle }}>
         <Typography variant="h4" fontWeight="bolder">
           Freedom and Constraints - Way to Design Systems with Precision and Performance
         </Typography>
@@ -159,7 +159,7 @@ const Home = () => {
             </Link>
           </Grid>
         </Grid>
-        <br/>
+        <br />
       </Paper>
     </div>
   );

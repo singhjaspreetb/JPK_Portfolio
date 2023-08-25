@@ -33,7 +33,7 @@ const Biosketch = () => {
 
     return (
         <div>
-            <Paper style={paperStyle}>
+            <Paper elevation={3} sx={{ ...paperStyle }}>
                 <Typography variant="h4" fontWeight="bolder">
                     Bio-Sketch
                 </Typography>

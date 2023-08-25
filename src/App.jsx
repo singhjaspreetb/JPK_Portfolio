@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Grid from '@mui/material/Grid';
 import BioSketch from './pages/BioSketch';
 import Publications from './pages/Publications';
+import Patents from './pages/Patents';
 
 const App = () => {
   return (
@@ -18,9 +19,10 @@ const App = () => {
         <Grid item xs={12} md={10}>
           <MainContent>
             <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/bioSketch" element={<BioSketch />} />
-            <Route path="/publications" element={<Publications/>} />
+              <Route path="/" element={<Home />} />
+              <Route path="/bioSketch" element={<BioSketch />} />
+              <Route path="/publications" element={<Publications />} />
+              <Route path="/patents" element={<Patents />} />
             </Routes>
           </MainContent>
         </Grid>
