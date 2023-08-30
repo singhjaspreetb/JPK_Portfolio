@@ -7,6 +7,7 @@ import Grid from '@mui/material/Grid';
 import BioSketch from './pages/BioSketch';
 import Publications from './pages/Publications';
 import Patents from './pages/Patents';
+import Projects from './pages/Projects';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
               <Route path="/bioSketch" element={<BioSketch />} />
               <Route path="/publications" element={<Publications />} />
               <Route path="/patents" element={<Patents />} />
+              <Route path="/projects" element={<Projects />} />
             </Routes>
           </MainContent>
         </Grid>

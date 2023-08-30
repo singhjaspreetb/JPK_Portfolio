@@ -10,6 +10,8 @@ import pub1 from "./images/2021med_grajesh.png"
 import pub2 from "./images/2019PE_varan.jpg"
 import pub3 from "./images/bzr.png"
 import pub4 from "./images/str.png"
+import nanoimp1 from "./images/nanoimp1.jpg"
+import patent2021 from "./images/patent2021.jpeg"
 
 export{
     jk_logo,
@@ -24,4 +26,6 @@ export{
     pub2,
     pub3,
     pub4,
+    nanoimp1,
+    patent2021,
 }
