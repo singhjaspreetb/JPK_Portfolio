@@ -12,6 +12,10 @@ import pub3 from "./images/bzr.png"
 import pub4 from "./images/str.png"
 import nanoimp1 from "./images/nanoimp1.jpg"
 import patent2021 from "./images/patent2021.jpeg"
+import Amanpreet from "./images/AmanpreetSingh.jpg"
+import Gaurav from "./images/Gaurav.jpg"
+import Rajendra from "./images/Rajendra.jpg"
+import Vivek from "./images/Vivek.jpeg"
 
 export{
     jk_logo,
@@ -28,4 +32,8 @@ export{
     pub4,
     nanoimp1,
     patent2021,
+    Amanpreet,
+    Gaurav,
+    Rajendra,
+    Vivek
 }

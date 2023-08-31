@@ -8,6 +8,7 @@ import BioSketch from './pages/BioSketch';
 import Publications from './pages/Publications';
 import Patents from './pages/Patents';
 import Projects from './pages/Projects';
+import Students from './pages/Students';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
               <Route path="/publications" element={<Publications />} />
               <Route path="/patents" element={<Patents />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/students" element={<Students />} />
             </Routes>
           </MainContent>
         </Grid>
