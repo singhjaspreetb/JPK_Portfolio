@@ -13,6 +13,7 @@ const Home = () => {
   const paperStyle = {
     padding: '16px',
     marginBottom: '16px',
+    border: '2px solid #336699', 
   };
 
   const imageStyle = {

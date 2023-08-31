@@ -9,6 +9,10 @@ import Publications from './pages/Publications';
 import Patents from './pages/Patents';
 import Projects from './pages/Projects';
 import Students from './pages/Students';
+import Courses from './pages/Courses';
+import MCP100 from './pages/Mcp100';
+import DPMDesign from './pages/MCL747';
+import DesignOptimization from './pages/MCL742';
 
 const App = () => {
   return (
@@ -27,6 +31,11 @@ const App = () => {
               <Route path="/patents" element={<Patents />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/students" element={<Students />} />
+              <Route path="/courses" element={<Courses />} />
+              <Route path="/mcp100" element={<MCP100 />} />
+              <Route path="/mcl747" element={<DPMDesign />} />
+              <Route path="/mcl742" element={<DesignOptimization />} />
+
             </Routes>
           </MainContent>
         </Grid>

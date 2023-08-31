@@ -16,6 +16,7 @@ import Amanpreet from "./images/AmanpreetSingh.jpg"
 import Gaurav from "./images/Gaurav.jpg"
 import Rajendra from "./images/Rajendra.jpg"
 import Vivek from "./images/Vivek.jpeg"
+import Mechanical from "./images/ME.jpeg"
 
 export{
     jk_logo,
@@ -35,5 +36,6 @@ export{
     Amanpreet,
     Gaurav,
     Rajendra,
-    Vivek
+    Vivek,
+    Mechanical
 }

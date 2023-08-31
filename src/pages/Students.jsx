@@ -15,9 +15,14 @@ const Students = () => {
         border: 'none',
         borderTop: '1px solid #ccc',
     };
+    const paperStyle = {
+        padding: '16px',
+        marginBottom: '16px',
+        border: '2px solid #336699', 
+    };
 
     return (
-        <Paper sx={{ padding: '1rem', marginBottom: '1rem' }}>
+        <Paper elevation={3} sx={{ ...paperStyle }}>
 
             <Typography variant="h4" fontWeight="bolder">
                 Amanpreet Singh (2023). <em>Design of a Robotic Manipulator for Minimally Invasive Surgery.</em> PhD thesis,

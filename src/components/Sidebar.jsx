@@ -58,19 +58,19 @@ const Sidebar = () => {
         <ListItemText primary="Courses" />
       </ListItem>
       <List component="div" disablePadding>
-        <ListItem button component={Link} to="/courses/mcp100">
+        <ListItem button component={Link} to="/mcp100">
           <ListItemText primary="MCP100 EV&C" />
         </ListItem>
-        <ListItem button component={Link} to="/courses/mcl747">
+        <ListItem button component={Link} to="/mcl747">
           <ListItemText primary="MCL747 DPM" />
         </ListItem>
-        <ListItem button component={Link} to="/courses/mcl742">
+        <ListItem button component={Link} to="/mcl742">
           <ListItemText primary="MCL742 D&O" />
         </ListItem>
-        <ListItem button component={Link} to="/courses/gian">
+        <ListItem button component={Link} to="/gian">
           <ListItemText primary="GIAN" />
         </ListItem>
-        <ListItem button component={Link} to="/courses/dpm">
+        <ListItem button component={Link} to="/dpm">
           <ListItemText primary="DPM" />
         </ListItem>
       </List>
