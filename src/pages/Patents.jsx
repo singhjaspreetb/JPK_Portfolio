@@ -1,12 +1,18 @@
-import { Typography, Paper, List, ListItem, ListItemText, Link, Grid } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import Link from '@mui/material/Link';
+import Grid from '@mui/material/Grid';
 import { patentsApplied, patentsGranted } from '../utils/patents';
 import { patent2021, nanoimp1, certificate } from '../assets/constant';
 
 const Patents = () => {
   const paperStyle = {
-    padding: '16px',
-    marginBottom: '16px',
-    border: '2px solid #336699', 
+    padding: '24px',
+    marginBottom: '24px',
+    border: '2px solid #336699',
   };
 
   const hrStyle = {
@@ -14,7 +20,7 @@ const Patents = () => {
     border: 'none',
     borderTop: '1px solid #ccc',
   };
-  
+
   const centerAlignStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -25,7 +31,7 @@ const Patents = () => {
 
   const imageStyle = {
     maxWidth: '100%',
-    height: '15rem',
+    height: 'auto',
     border: '2px solid blue',
     borderRadius: '5px',
     boxShadow: '2px 4px 6px rgba(0, 0, 0, 0.1)',
@@ -33,7 +39,7 @@ const Patents = () => {
 
   return (
     <Paper elevation={3} sx={{ ...paperStyle }}>
-      <Typography variant="h4" fontWeight="bolder">
+      <Typography variant="h4" fontWeight="bold" gutterBottom>
         Patents
       </Typography>
       <hr style={hrStyle} />
@@ -41,7 +47,6 @@ const Patents = () => {
         <Grid item xs={12} md={5}>
           <Typography variant="h6">Granted Patents</Typography>
           <div style={centerAlignStyle}>
-
             <List>
               {patentsGranted.map((patent, index) => (
                 <ListItem key={index} disablePadding>
@@ -74,9 +79,11 @@ const Patents = () => {
         </Grid>
         <Grid item xs={12} md={3}>
           <img src={nanoimp1} alt="Robot" style={imageStyle} />
-        </Grid><Grid item xs={12} md={2}>
+        </Grid>
+        <Grid item xs={12} md={2}>
           <img src={patent2021} alt="Robot" style={imageStyle} />
-        </Grid><Grid item xs={12} md={2}>
+        </Grid>
+        <Grid item xs={12} md={2}>
           <img src={certificate} alt="Robot" style={imageStyle} />
         </Grid>
         <Grid item xs={12}>

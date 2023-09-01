@@ -22,34 +22,35 @@ const DPMDesign = () => {
 
     return (
         <div>
-            <Paper elevation={3} sx={{ ...paperStyle }}>
+            <Paper elevation={3} sx={paperStyle}>
                 <Typography variant="h4" fontWeight="bolder" marginBottom="1rem">
-                    Design of Precision Machines
+                    DESIGN OF PRECISION MACHINES
                 </Typography>
                 <hr style={hrStyle} />
 
-                <marquee behavior="alternate" bgcolor="#ADD8E6">
-                    <Typography variant="h5" color="error" fontStyle="italic" marginBottom="1rem">
-                        Please visit moodle link for updates... !!!
-                    </Typography>
-                </marquee>
+                <Typography variant="h5" color="#4B0082" fontStyle="italic" marginBottom="1rem">
+                    2202-MCL747 Course Information
+                </Typography>
 
                 <Typography variant="h6" marginBottom="0.5rem">
-                    <a href="http://web.iitd.ac.in/~jpkhatait" rel="noreferrer" target="_blank" style={linkStyle}>
+                    <Link href="http://web.iitd.ac.in/~jpkhatait" rel="noreferrer" target="_blank" style={linkStyle}>
                         Home
-                    </a>
+                    </Link>
                 </Typography>
 
                 <Typography variant="h6" marginBottom="0.5rem">
-                    <a href="https://moodle.iitd.ac.in/course/view.php?id=15716" rel="noreferrer" target="_blank" style={linkStyle}>
-                        Moodle Course Link - 2202-MCL747
-                    </a>
+                    <Link href="https://moodle.iitd.ac.in/course/view.php?id=15716" rel="noreferrer" target="_blank" style={linkStyle}>
+                        Moodle Course Link
+                    </Link>
                 </Typography>
+
+                <hr style={hrStyle} />
 
                 <Typography variant="h6" marginBottom="1rem">
                     Course Evaluation
                 </Typography>
 
+                <hr style={hrStyle} />
                 <Typography variant="h6" marginBottom="0.5rem">
                     Exams
                 </Typography>
@@ -65,6 +66,7 @@ const DPMDesign = () => {
                     </ListItem>
                 </List>
 
+                <hr style={hrStyle} />
                 <Typography variant="h6" marginBottom="1rem">
                     Labs
                 </Typography>
@@ -73,6 +75,8 @@ const DPMDesign = () => {
                         <Typography variant="body1">Course projects</Typography>
                     </ListItem>
                 </List>
+
+                <hr style={hrStyle} />
                 <Typography variant="h6" gutterBottom>
                     Lectures
                 </Typography>
@@ -80,6 +84,7 @@ const DPMDesign = () => {
                     <ListItem>
                         <ListItemText primary={<b>Monday & Thursday</b>} />
                     </ListItem>
+                <hr style={hrStyle} />
                     <ListItem>
                         <ListItemText primary={<b>Introduction</b>} />
                         <List>
@@ -89,9 +94,9 @@ const DPMDesign = () => {
                             <ListItem>
                                 <ListItemText primary="Part 2" />
                             </ListItem>
-                            {/* Add more parts if needed */}
                         </List>
                     </ListItem>
+                <hr style={hrStyle} />
                     <ListItem>
                         <ListItemText primary={<b>Controlling Degrees of Freedom</b>} />
                         <List>
@@ -125,68 +130,9 @@ const DPMDesign = () => {
                                     }
                                 />
                             </ListItem>
-                            <ListItem>
-                                <ListItemText
-                                    primary={
-                                        <>
-                                            Part 3/6{' '}
-                                            <Link href="http://a.impartus.com/ilc/w/v/VGr8" target="_blank">
-                                                impartus
-                                            </Link>{' '}
-                                            <Link href="https://youtu.be/QjUUEb8T6wU" target="_blank">
-                                                youtube
-                                            </Link>
-                                        </>
-                                    }
-                                />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemText
-                                    primary={
-                                        <>
-                                            Part 4/6{' '}
-                                            <Link href="http://a.impartus.com/ilc/w/v/VGro" target="_blank">
-                                                impartus
-                                            </Link>{' '}
-                                            <Link href="https://youtu.be/U4jcnxlt1rs" target="_blank">
-                                                youtube
-                                            </Link>
-                                        </>
-                                    }
-                                />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemText
-                                    primary={
-                                        <>
-                                            Part 5/6{' '}
-                                            <Link href="http://a.impartus.com/ilc/w/v/VGrJ" target="_blank">
-                                                impartus
-                                            </Link>{' '}
-                                            <Link href="https://youtu.be/K5JCiA2vQ9A" target="_blank">
-                                                youtube
-                                            </Link>
-                                        </>
-                                    }
-                                />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemText
-                                    primary={
-                                        <>
-                                            Part 6/6{' '}
-                                            <Link href="http://a.impartus.com/ilc/w/v/VGrF" target="_blank">
-                                                impartus
-                                            </Link>{' '}
-                                            <Link href="https://youtu.be/YhVNJVHhcwk" target="_blank">
-                                                youtube
-                                            </Link>
-                                        </>
-                                    }
-                                />
-                            </ListItem>
                         </List>
                     </ListItem>
+                <hr style={hrStyle} />
                     <ListItem>
                         <ListItemText primary={<b>Flexures</b>} />
                         <List>
@@ -220,11 +166,12 @@ const DPMDesign = () => {
                                     }
                                 />
                             </ListItem>
-                            {/* Add more parts if needed */}
                         </List>
                     </ListItem>
-                    {/* Add more lecture topics if needed */}
                 </List>
+
+                <hr style={hrStyle} />
+
                 <Typography variant="h6" marginBottom="1rem">
                     Reading Materials
                 </Typography>
@@ -267,14 +214,12 @@ const DPMDesign = () => {
                             }
                         />
                     </ListItem>
-                    {/* You can continue adding more items following the same pattern */}
                 </List>
 
-
+                <hr style={hrStyle} />
                 <Typography variant="h6" marginBottom="1rem">
                     Suggested Books and Reference Materials
                 </Typography>
-
                 <List>
                     {suggestedBooks.map((book, index) => (
                         <ListItem key={index}>
@@ -283,7 +228,8 @@ const DPMDesign = () => {
                     ))}
                 </List>
 
-                {/* Publications */}
+                <hr style={hrStyle} />
+
                 <Typography variant="h6" gutterBottom>
                     Publications (Out of Lab Projects)
                 </Typography>
@@ -330,7 +276,7 @@ const DPMDesign = () => {
                     ))}
                 </List>
 
-                {/* Journals */}
+                <hr style={hrStyle} />
                 <Typography variant="h6" gutterBottom>
                     Journals
                 </Typography>
@@ -347,7 +293,7 @@ const DPMDesign = () => {
                     ))}
                 </List>
 
-                {/* Magazines */}
+                <hr style={hrStyle} />
                 <Typography variant="h6" gutterBottom>
                     Magazines
                 </Typography>
@@ -375,7 +321,6 @@ const DPMDesign = () => {
                         </ListItem>
                     ))}
                 </List>
-
             </Paper>
         </div>
     );
