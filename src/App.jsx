@@ -13,6 +13,8 @@ import Courses from './pages/Courses';
 import MCP100 from './pages/Mcp100';
 import DPMDesign from './pages/MCL747';
 import DesignOptimization from './pages/MCL742';
+import GIAN from './pages/Gian';
+import DPM from './pages/Dpm';
 
 const App = () => {
   return (
@@ -35,6 +37,8 @@ const App = () => {
               <Route path="/mcp100" element={<MCP100 />} />
               <Route path="/mcl747" element={<DPMDesign />} />
               <Route path="/mcl742" element={<DesignOptimization />} />
+              <Route path="/gian" element={<GIAN />} />
+              <Route path="/dpm" element={<DPM />} />
 
             </Routes>
           </MainContent>

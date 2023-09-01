@@ -37,35 +37,17 @@ const DesignOptimization = () => {
           </Link>
         </Typography>
         <Typography variant="h6" marginBottom="0.5rem">
-          <Link href="https://moodle.iitd.ac.in/course/view.php?id=14059" rel="noreferrer" target="_blank" style={linkStyle}>
-            Moodle
-          </Link>
-        </Typography>
-        <Typography variant="h6" marginBottom="1rem">
-          Course Evaluation
-        </Typography>
-        <Typography variant="h6" marginBottom="0.5rem">
-          Lectures
+          Lab
         </Typography>
         <List>
           <ListItem>
             <Typography variant="body1">
-              <i>Mon, 5:00 PM - 6:30 PM</i>
+              <i>Wed, 11:00 AM - 01:00 PM</i>
             </Typography>
           </ListItem>
           <ListItem>
             <Typography variant="body1">
-              <i>Dogra Hall</i>
-            </Typography>
-          </ListItem>
-        </List>
-        <Typography variant="h6" marginBottom="1rem">
-          Labs
-        </Typography>
-        <List>
-          <ListItem>
-            <Typography variant="body1">
-              <i>LH 538 Graphics Lab</i>
+              <i>Online</i>
             </Typography>
           </ListItem>
         </List>
